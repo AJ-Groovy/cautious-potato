@@ -19,7 +19,7 @@ a:hover {
   color: #dc3545;
 }
 
-button {
+.c-btn {
   display: inline-block;
   position: relative;
   background: none;
@@ -31,12 +31,12 @@ button {
   background: rgba(0, 0, 0, 0.09);
 }
 
-span {
+.c-btn span {
   display: block;
 }
 
-button::before,
-button::after {
+.c-btn::before,
+.c-btn::after {
   content: "";
   width: 0;
   height: 2px;
@@ -45,8 +45,8 @@ button::after {
   background: #fff;
 }
 
-span::before,
-span::after {
+.c-btn span::before,
+.c-btn span::after {
   content: "";
   width: 2px;
   height: 0;
@@ -55,13 +55,13 @@ span::after {
   background: #fff;
 }
 
-button:hover::before,
-button:hover::after {
+.c-btn:hover::before,
+.c-btn:hover::after {
   width: 100%;
 }
 
-button:hover span::before,
-button:hover span::after {
+.c-btn:hover span::before,
+.c-btn:hover span::after {
   height: 100%;
 }
 
