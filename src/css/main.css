@@ -1,5 +1,9 @@
-html {
-  font-family: 'Open Sans', sans-serif;
+:root {
+  --font-family-sans-serif: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+  font-family: var(--font-family-sans-serif);
 }
 
 section {
@@ -15,50 +19,187 @@ a:hover {
   color: #dc3545;
 }
 
+button {
+  display: inline-block;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 20px 0;
+  background: rgba(0, 0, 0, 0.09);
+}
+
+span {
+  display: block;
+}
+
+button::before,
+button::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: #fff;
+}
+
+span::before,
+span::after {
+  content: "";
+  width: 2px;
+  height: 0;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: #fff;
+}
+
+button:hover::before,
+button:hover::after {
+  width: 100%;
+}
+
+button:hover span::before,
+button:hover span::after {
+  height: 100%;
+}
+
+.c-btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+
+.c-btn::after {
+  right: 0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+
+.c-btn span::after {
+  right: 0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+
+.c-btn::before {
+  left: 0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+
+.c-btn span::before {
+  left: 0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+
+.wrapper {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  padding: 15px;
+}
+
+.hero {
+  padding: 0;
+}
 
 .hero__slider {
   overflow: hidden;
-  padding: 24px;
-  border: 1px solid black;
 }
 
-.hero__slider-slide img {
-  width: 400px;
-  height: 400px;
+.hero__slider-slide-content {
+  display: flex;
+}
+
+.slide-partial {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.slide-partial img {
+  width: 100%;
+  height: calc(100vh - 86px);
   object-fit: cover;
   margin-left: auto;
   position: relative;
-  transform: scale(1.12);
-  opacity: 0;
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transform: scale(1.2);
+  transition: filter .5s ease-in-out, transform .5s ease-in-out;
+  filter: grayscale(100%);
 }
 
-.hero__slider-slide.slick-current img {
-  transform: scale(1);
+.slide-details {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+}
+
+.slide-partial:hover h2 {
+  text-shadow: 1px 1px 8px black;
+}
+
+.slide-partial:hover p {
+  text-shadow: 1px 1px 4px black;
+  height: 60px;
   opacity: 1;
+}
+
+.slide-partial:hover button {
+  text-shadow: 1px 1px 4px black;
+  height: 50px;
+  opacity: 1;
+}
+
+.slide-partial:hover img {
+  transform: scale(1);
+  filter: grayscale(0%);
+  object-position: center center;
 }
 
 .slick-initialized .slick-slide {
   display: flex;
   align-items: center;
-  padding: 0 35px;
   outline: none;
 }
 
-.hero__slider-slide-content {
+.slide-details {
   padding: 24px;
-  border: 1px solid black;
 }
 
-.hero__slider-slide-content strong {
-  font-size: 46px;
-  display: block;
-  position: relative;
+.slide-details h2 {
+  color: #fff;
+  font-size: 44px;
+  font-weight: 900;
+  transition: text-shadow .5s ease-in-out;
+}
+
+.slide-details p {
+  height: 0;
+  opacity: 0;
   overflow: hidden;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 400;
+  transition: text-shadow .3s ease-in-out, height .3s ease-in-out, opacity .3s ease-in-out;
+  will-change: height;
 }
 
-.hero__slider-slide-content p {
-  font-size: 24px;
+.slide-details button {
+  height: 0;
+  opacity: 0;
+  transition: text-shadow .3s ease-in-out, height .3s ease-in-out, opacity .3s ease-in-out;
+  will-change: height;
 }
 
 .card {
@@ -75,17 +216,4 @@ a:hover {
 .footer .form-group {
   margin-bottom: 0;
   margin-right: 15px;
-}
-
-.logo {
-  position: relative;
-  width: 65px;
-}
-
-.logo strong {
-  position: absolute;
-  bottom: 5px;
-  right: -40px;
-  font-size: 10px;
-
 }
