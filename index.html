@@ -33,15 +33,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="#">Catalog</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    Dropdown
+                    Longboards
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">Action</a>
@@ -63,14 +63,15 @@
         </div>
       </div>
     </header>
+
     <main class="main">
       <section class="hero container-fluid">
         <div class="hero__slider">
           <div class="hero__slider-slide">
             <div class="hero__slider-slide-content">
               <strong>Holiday discounts</strong>
-              <p>all longboards and accessories up to 30% off</p>
-              <button class="btn btn-danger">View details</button>
+              <p>All longboards and accessories up to 30% off</p>
+              <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">View details</button>
             </div>
             <img src="src/assets/images/featured-1.png" alt="random string">
           </div>
@@ -78,7 +79,7 @@
             <div class="hero__slider-slide-content">
               <strong>some name</strong>
               <p>some dsc</p>
-              <button class="btn btn-danger">View details</button>
+              <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">View details</button>
             </div>
             <img src="src/assets/images/featured-2.png" alt="random string">
           </div>
@@ -86,7 +87,7 @@
             <div class="hero__slider-slide-content">
               <strong>some name</strong>
               <p>some dsc</p>
-              <button class="btn btn-danger">View details</button>
+              <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">View details</button>
             </div>
             <img src="src/assets/images/featured-3.png" alt="random string">
           </div>
@@ -116,7 +117,8 @@
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                 content.</p>
-              <a href="#" class="btn btn-danger">Go somewhere</a>
+              <button href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Go
+                somewhere</button>
             </div>
           </div>
           <div class="card col-4">
@@ -125,7 +127,8 @@
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                 content.</p>
-              <a href="#" class="btn btn-danger">Go somewhere</a>
+              <button href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Go
+                somewhere</button>
             </div>
           </div>
           <div class="card col-4">
@@ -134,7 +137,8 @@
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                 content.</p>
-              <a href="#" class="btn btn-danger">Go somewhere</a>
+              <button href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Go
+                somewhere</button>
             </div>
           </div>
         </div>
@@ -198,6 +202,38 @@
       </div>
     </footer>
   </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Please provide your contact information</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="d-flex justify-content-between">
+              <div class="form-group">
+                <label for="name">First Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter first name">
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" class="form-control" id="last-name" placeholder="Enter first name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Phone number</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Phone">
+            </div>
+            <button type="submit" class="btn btn-danger">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -209,15 +245,7 @@
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-  <script>
-    $(document).ready(function () {
-      $('.hero__slider').slick();
-    });
-
-    $('.hero__slider').on('afterChange', function (event, slick, direction) {
-
-    });
-  </script>
+  <script src="./src/js/main.js"></script>
 </body>
 
 </html>
