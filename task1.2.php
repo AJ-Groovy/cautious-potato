@@ -4,7 +4,8 @@ define('AGE_MEDIUM_ADULT', 40);
 define('AGE_ADULT', 60);
 define('AGE_OLD', 80);
 
-$age = 81;
+$age = 80;
+$base_message = 'Ваш возраст ';
 
 switch ($age) {
     case $age < AGE_YOUNG: {
@@ -12,7 +13,7 @@ switch ($age) {
             break;
         }
     case $age === AGE_YOUNG: {
-            echo ($base_message . 'равна ' . AGE_YOUNG);
+            echo ($base_message . 'равен ' . AGE_YOUNG);
             break;
         }
     case $age > AGE_YOUNG && $age < AGE_MEDIUM_ADULT: {
@@ -20,7 +21,7 @@ switch ($age) {
             break;
         }
     case $age === AGE_MEDIUM_ADULT: {
-            echo ($base_message . 'равна ' . AGE_MEDIUM_ADULT);
+            echo ($base_message . 'равен ' . AGE_MEDIUM_ADULT);
             break;
         }
     case $age > AGE_MEDIUM_ADULT && $age < AGE_ADULT: {
@@ -28,7 +29,7 @@ switch ($age) {
             break;
         }
     case $age === AGE_ADULT: {
-            echo ($base_message . 'равна ' . AGE_ADULT);
+            echo ($base_message . 'равен ' . AGE_ADULT);
             break;
         }
     case $age > AGE_ADULT && $age < AGE_OLD: {
@@ -36,7 +37,7 @@ switch ($age) {
             break;
         }
     case $age === AGE_OLD: {
-            echo ($base_message . 'равна ' . AGE_OLD);
+            echo ($base_message . 'равен ' . AGE_OLD);
             break;
         }
 
