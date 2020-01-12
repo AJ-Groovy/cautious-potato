@@ -132,7 +132,6 @@ while ($i <= $hue_arr_length) {
 };
 
 echo ('==== FOREACH ====');
-
 foreach ($hue_array as $item) {
     print_color_data($item);
 }
