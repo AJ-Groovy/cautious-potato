@@ -3,7 +3,7 @@ define('SMALL_SURNAME', 5);
 define('MEDIUM_SURNAME', 10);
 define('LARGE_SURNAME', 15);
 
-$last_name = 'Andri';
+$last_name = 'Andrievskiy';
 $last_name_length = strlen($last_name);
 $base_message = 'Длина вашей фамилии равна ' . $last_name_length . ' ';
 
