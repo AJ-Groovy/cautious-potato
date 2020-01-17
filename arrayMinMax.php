@@ -9,9 +9,9 @@ function get_min_value($array) {
     return min($array);
 }
 
-$array = [100, 1000, 32, 1035];
+$numbers = [2, -2, 5, 0, -88, 100, -95, 50, 33];
 
-echo(get_max_value($array));
+echo(get_max_value($numbers));
 echo('<br>');
-echo(get_min_value($array));
+echo(get_min_value($numbers));
 
