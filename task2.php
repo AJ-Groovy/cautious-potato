@@ -99,6 +99,7 @@ foreach ($colors as $value) {
 $hue_arr_length = count($hue_array);
 $value_arr_length = count($value_array);
 
+
 function get_rgba_string($rgba_obj)
 {
     return "rgba(" . $rgba_obj[0] . ", " . $rgba_obj[1] . ", " . $rgba_obj[2] . ", " . $rgba_obj[3] . ")";

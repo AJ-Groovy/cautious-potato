@@ -41,7 +41,6 @@ switch ($age) {
       break;
     }
 
-
   default: {
       echo ($base_message . 'больше чем ' . AGE_OLD);
     }
