@@ -1,20 +1,11 @@
 <?php
-define('SMALL_SURNAME', 5);
-define('MEDIUM_SURNAME', 10);
-define('LARGE_SURNAME', 15);
 
-$last_name = 'Andrievskiy';
-$last_name_length = strlen($last_name);
-$base_message = 'Длина вашей фамилии равна ' . $last_name_length . ' ';
+echo('lesson 4');
+echo('<p><a href="/lesson4/task1.1.php">Task 1.1</a></p>');
+echo('<p><a href="/lesson4/task1.2.php">Task 1.2</a></p>');
+echo('<p><a href="/lesson4/task2.php">Task 2</a></p>');
 
-if ($last_name_length > LARGE_SURNAME) {
-    $base_message .= 'и она больше чем ' . LARGE_SURNAME;
-} else if ($last_name_length > MEDIUM_SURNAME && $last_name_length < LARGE_SURNAME) {
-    $base_message .= 'и она больше чем ' . MEDIUM_SURNAME . ' и меньше чем ' . LARGE_SURNAME;
-} else if ($last_name_length > SMALL_SURNAME && $last_name_length < MEDIUM_SURNAME) {
-    $base_message .= 'и она больше чем ' . SMALL_SURNAME . ' и меньше чем ' . MEDIUM_SURNAME;
-} else if ($last_name_length < SMALL_SURNAME) {
-    $base_message .= 'и она меньше чем ' . SMALL_SURNAME;
-}
-
-echo ($base_message);
+echo('lesson 5');
+echo('<p><a href="/lesson5/factorial.php">Factorialize</a></p>');
+echo('<p><a href="/lesson5/arrayMinMax.php">Array min / max</a></p>');
+echo('<p><a href="/lesson5/reverseNumber.php">Reverse number</a></p>');
