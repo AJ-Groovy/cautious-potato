@@ -1,0 +1,9 @@
+.form-row {
+    margin-bottom: 10px;
+
+}
+
+input[type="text"] {
+    min-width: 300px;
+    height: 30px;
+}
