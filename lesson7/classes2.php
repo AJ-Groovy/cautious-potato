@@ -7,9 +7,9 @@
 
 class Worker
 {
-    public $name;
+    private $name;
+    private $salary;
     public $age;
-    public $salary;
 
     public function __construct($name, $age, $salary) {
         $this->name = $name;
@@ -28,4 +28,4 @@ class Worker
 }
 
 $worker = new Worker('Jack', 25, 1000);
-echo $worker->age * $worker->salary;
+echo $worker->age * $worker->getSalary();
