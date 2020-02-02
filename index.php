@@ -16,3 +16,4 @@ echo('<p><a href="/lesson6/forms.php">Forms</a></p>');
 echo('lesson 7');
 echo('<p><a href="/lesson7/classes.php">Classes</a></p>');
 echo('<p><a href="/lesson7/classes2.php">Classes 2</a></p>');
+echo('<p><a href="/scanFolders/scanFolders.php">Scan Folders</a></p>');
